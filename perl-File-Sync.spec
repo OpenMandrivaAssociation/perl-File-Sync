@@ -10,6 +10,7 @@ Release:   %mkrel 4
 license:   Artistic
 group:     Development/Perl
 url:       http://search.cpan.org/dist/%{pkgname}
+buildroot: %{_tmppath}/%{name}-%{version}-%(id -u -n)
 prefix:    %(echo %{_prefix})
 source:    http://search.cpan.org//CPAN/authors/id/C/CE/CEVANS/%{pkgname}-%{version}.tar.gz
 Buildrequires: perl-devel
