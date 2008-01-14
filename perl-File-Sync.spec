@@ -3,7 +3,7 @@
 name:      perl-%{module}
 summary:   Perl access to fsync() and sync() function calls
 Version:   0.09
-Release:   %mkrel 5
+Release:   %mkrel 6
 license:   Artistic
 group:     Development/Perl
 url:       http://search.cpan.org/dist/%{module}
