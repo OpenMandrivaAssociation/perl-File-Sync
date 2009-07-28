@@ -1,15 +1,18 @@
-%define module File-Sync
+%define upstream_name    File-Sync
+%define upstream_version 0.09
 
-name:      perl-%{module}
-summary:   Perl access to fsync() and sync() function calls
-Version:   0.09
-Release:   %mkrel 8
+Name:      perl-%{upstream_name}
+Version:   %perl_convert_version %{upstream_version}
+Release:   %mkrel 1
+
+Summary:   Perl access to fsync() and sync() function calls
 license:   Artistic
-group:     Development/Perl
-url:       http://search.cpan.org/dist/%{module}
-source:    http://search.cpan.org//CPAN/authors/id/C/CE/CEVANS/%{module}-%{version}.tar.gz
+Group:     Development/Perl
+Url:       http://search.cpan.org/dist/%{upstream_name}
+Source0:   http://search.cpan.org//CPAN/authors/id/C/CE/CEVANS/%{upstream_name}-%{upstream_version}.tar.gz
+
 Buildrequires: perl-devel
-buildroot: %{_tmppath}/%{name}-%{version}
+buildroot: %{_tmppath}/%{name}-%{version}-%{release}
 
 
 %description
@@ -27,7 +30,7 @@ made available as a method of the I<FileHandle> and I<IO::Handle>
 classes.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
