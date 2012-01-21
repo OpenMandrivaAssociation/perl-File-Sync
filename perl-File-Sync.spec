@@ -13,8 +13,6 @@ Source0:   http://search.cpan.org//CPAN/authors/id/C/CE/CEVANS/%{upstream_name}-
 
 Buildrequires: perl-devel
 buildroot: %{_tmppath}/%{name}-%{version}-%{release}
-# temporary dep due to the perl-5.14 bump
-BuildRequires:  perl-List-MoreUtils >= 0.320.0-4
 
 
 %description
