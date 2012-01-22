@@ -3,7 +3,7 @@
 
 Name:      perl-%{upstream_name}
 Version:   %perl_convert_version %{upstream_version}
-Release:   %mkrel 8
+Release:   %mkrel 9
 
 Summary:   Perl access to fsync() and sync() function calls
 license:   Artistic
