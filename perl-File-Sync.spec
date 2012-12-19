@@ -1,18 +1,17 @@
-%define upstream_name    File-Sync
-%define upstream_version 0.09
+%define	module	File-Sync
+%define	modver	0.09
 
-Name:      perl-%{upstream_name}
-Version:   %perl_convert_version %{upstream_version}
-Release:   10
+Name:		perl-%{module}
+Version:	%{perl_convert_version %{modver}}
+Release:	11
 
-Summary:   Perl access to fsync() and sync() function calls
-License:   Artistic
-Group:     Development/Perl
-Url:       http://search.cpan.org/dist/%{upstream_name}
-Source0:   http://search.cpan.org//CPAN/authors/id/C/CE/CEVANS/%{upstream_name}-%{upstream_version}.tar.gz
+Summary:	Perl access to fsync() and sync() function calls
+License:	Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{module}
+Source0:	http://search.cpan.org//CPAN/authors/id/C/CE/CEVANS/%{module}-%{modver}.tar.gz
 
-BuildRequires: perl-devel
-
+BuildRequires:	perl-devel
 
 %description
 The fsync() function takes a Perl file handle as its only argument, and
@@ -29,28 +28,28 @@ made available as a method of the I<FileHandle> and I<IO::Handle>
 classes.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{module}-%{modver}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make CFLAGS="%{optflags}"
 
 %check
-%__make test
+make test
 
 %install
 %makeinstall_std
-
-%clean
-rm -rf %{buildroot}
 
 %files
 %{perl_vendorarch}/File
 %{perl_vendorarch}/auto/File
 %{_mandir}/man3/*
 
-
 %changelog
+* Wed Dec 19 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.90.0-11
+- rebuild against new perl
+- cleanups
+
 * Sun Jan 22 2012 Oden Eriksson <oeriksson@mandriva.com> 0.90.0-9mdv2012.0
 + Revision: 765257
 - rebuilt for perl-5.14.2
