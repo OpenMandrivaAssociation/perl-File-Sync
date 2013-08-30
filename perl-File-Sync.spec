@@ -9,7 +9,6 @@ License:	Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}
 Source0:	http://search.cpan.org//CPAN/authors/id/C/CE/CEVANS/%{module}-%{modver}.tar.gz
-
 BuildRequires:	perl-devel
 
 %description
@@ -27,7 +26,7 @@ made available as a method of the I<FileHandle> and I<IO::Handle>
 classes.
 
 %prep
-%setup -q -n %{module}-%{modver}
+%setup -qn %{module}-%{modver}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
