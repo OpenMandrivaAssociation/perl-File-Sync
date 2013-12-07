@@ -4,7 +4,7 @@
 Summary:	Perl access to fsync() and sync() function calls
 Name:		perl-%{module}
 Version:	%{perl_convert_version %{modver}}
-Release:	12
+Release:	13
 License:	Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}
