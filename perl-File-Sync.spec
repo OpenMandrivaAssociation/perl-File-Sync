@@ -1,14 +1,15 @@
 %define	module	File-Sync
-%define	modver	0.09
+%define	modver	0.11
 
 Summary:	Perl access to fsync() and sync() function calls
 Name:		perl-%{module}
 Version:	%{perl_convert_version %{modver}}
-Release:	16
+Release:	1
 License:	Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}
 Source0:	http://search.cpan.org//CPAN/authors/id/C/CE/CEVANS/%{module}-%{modver}.tar.gz
+BuildRequires:	perl(ExtUtils::MakeMaker)
 BuildRequires:	perl-devel
 
 %description
