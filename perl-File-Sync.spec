@@ -9,6 +9,7 @@ License:	Artistic
 Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{module}
 Source0:	http://search.cpan.org//CPAN/authors/id/C/CE/CEVANS/%{module}-%{modver}.tar.gz
+BuildRequires:	make
 BuildRequires:	perl(ExtUtils::MakeMaker)
 BuildRequires:	perl-devel
 
